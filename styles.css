@@ -26,13 +26,31 @@ header {
   overflow-x: auto;
   margin: 1rem 0;
   max-width: calc(100vw - 2rem);
+  gap: 7px;
+  
 }
 
-#ramen-menu img {
+#ramen-menu img{
   flex: 0 1 auto;
   height: 150px;
   margin-right: 0.5rem;
   cursor: pointer;
+  
+}
+#ramen-menu > div{
+  position: relative;  
+}
+#ramen-menu .editables{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+   
+}
+#ramen-menu .editables span{
+  font-size: 44px;
+  color: black;
+  
 }
 
 #ramen-menu img:last-child {
@@ -99,4 +117,20 @@ form h4 {
   margin: 0.5rem 0;
   color: white;
   background-color: black;
+}
+/*
+* additional styles
+*/
+
+
+.hidden{
+  visibility: hidden;
+}
+#ramen-menu div:hover{
+ 
+  background-color: #ccc;
+  
+}
+#ramen-menu div:hover + .editables{  
+  opacity: 100%;
 }
